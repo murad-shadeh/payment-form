@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Settings</title>
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="settings-container">
+      <header>
+        <h1>Settings</h1>
+        <p class="subtitle">Payment</p>
+      </header>
+      <main>
+        <div class="section-title">Saved cards:</div>
+
+        <div class="saved-card-row">
+          <i
+            class="fa-brands fa-cc-mastercard"
+            style="font-size: 40px; margin-bottom: 20px"
+          ></i>
+          <div class="input-group">
+            <label>Card Number</label>
+            <input type="text" placeholder="•••• •••• •••• 3193" />
+          </div>
+          <button class="remove-btn">Remove card</button>
+        </div>
+        <div class="saved-card-row">
+          <i
+            class="fa-brands fa-cc-visa"
+            style="font-size: 40px; margin-bottom: 20px"
+          ></i>
+          <div class="input-group">
+            <label>Card Number</label>
+            <input type="text" placeholder="•••• •••• •••• 4296" />
+          </div>
+          <button class="remove-btn">Remove card</button>
+        </div>
+      </main>
+      <footer>
+        <div class="section-title">Add new card:</div>
+        <form id="payment-form">
+          <div class="input-group">
+            <label for="cardholder-name">Cardholder's Name</label>
+            <input
+              type="text"
+              id="cardholder-name"
+              placeholder="Murad Dabbous"
+              required
+            />
+          </div>
+
+          <div class="form-row-three">
+            <div class="input-group">
+              <label for="card-number">Card Number</label>
+              <input
+                type="text"
+                id="card-number"
+                placeholder="1234 5678 1234 5678"
+                maxlength="19"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="expire-date">Expire</label>
+              <input
+                type="text"
+                id="expire-date"
+                placeholder="MM/YY"
+                maxlength="5"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="cvv">Cvv</label>
+              <input
+                type="password"
+                id="cvv"
+                placeholder="•••"
+                maxlength="3"
+                required
+              />
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">ADD CARD</button>
+        </form>
+      </footer>
+    </div>
+  </body>
+</html>
