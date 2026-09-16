@@ -1,98 +1,18 @@
-/* Base Resets */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #a3c9c1 0%, #1c2b30 100%);
+  background-image: url("../image/visacard1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
 }
-
-/* Base Settings Container */
-.settings-container {
-  background-color: #ffffff;
-  width: 100%;
-  max-width: 650px;
-  border-radius: 8px;
-  padding: 40px 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Header Styles */
-h1 {
-  text-align: center;
-  font-size: 28px;
-  color: #222222;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 14px;
-  color: #666666;
-  margin-bottom: 30px;
-}
-
-/* Global Content Form Titles */
-.section-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: #222222;
-  margin-bottom: 15px;
-}
-
-/* Main Section Elements */
-.saved-card-row {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 12px;
-}
-
-.card-icon {
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  padding: 8px 12px;
-  width: 60px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.remove-btn {
-  background: none;
-  border: none;
-  color: #7b2cbf;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  padding: 5px;
-}
-
-.remove-btn:hover {
-  text-decoration: underline;
-}
-
-/* Footer Section / Add New Card Form Elements */
-footer {
-  margin-top: 30px;
-}
-
-.input-group {
-  position: relative;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.input-group label {
+.label-style {
   position: absolute;
   top: -8px;
   left: 12px;
@@ -102,46 +22,9 @@ footer {
   color: #999999;
   z-index: 1;
 }
-
-.input-group input {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #333333;
-  outline: none;
+.btn:hover {
+  text-decoration: underline;
 }
-
-.input-group input:focus {
-  border-color: #7b2cbf;
-}
-
-.input-group input:disabled {
-  background-color: #ffffff;
-  cursor: not-allowed;
-}
-
-.form-row-three {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 15px;
-}
-
-.submit-btn {
-  width: 100%;
-  background-color: #00b050;
-  color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 10px;
-  letter-spacing: 0.5px;
-}
-
-.submit-btn:hover {
-  background-color: #008f3f;
+.btn.btn-success:hover {
+  text-decoration: none;
 }

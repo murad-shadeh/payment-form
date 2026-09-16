@@ -1,10 +1,13 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment Settings</title>
-    <link rel="stylesheet" href="public/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
@@ -12,87 +15,138 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <title>Payment Form</title>
   </head>
-  <body>
-    <div class="settings-container">
-      <header>
-        <h1>Settings</h1>
-        <p class="subtitle">Payment</p>
-      </header>
-      <main>
-        <div class="section-title">Saved cards:</div>
 
-        <div class="saved-card-row">
-          <i
-            class="fa-brands fa-cc-mastercard"
-            style="font-size: 40px; margin-bottom: 20px"
-          ></i>
-          <div class="input-group">
-            <label>Card Number</label>
-            <input type="text" placeholder="•••• •••• •••• 3193" />
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container my-5" style="max-width: 780px">
+        <div class="bg-white rounded-3 p-4 p-md-5 shadow-sm">
+          <div class="text-center mb-5">
+            <h1 class="h3 fw-medium mb-1">Settings</h1>
+            <p class="text-secondary small mb-0">Payment</p>
           </div>
-          <button class="remove-btn">Remove card</button>
-        </div>
-        <div class="saved-card-row">
-          <i
-            class="fa-brands fa-cc-visa"
-            style="font-size: 40px; margin-bottom: 20px"
-          ></i>
-          <div class="input-group">
-            <label>Card Number</label>
-            <input type="text" placeholder="•••• •••• •••• 4296" />
+
+          <h2 class="h6 fw-bold mb-3">Saved cards:</h2>
+          <div class="row align-items-center g-3 mb-3">
+            <div class="col-auto">
+              <div
+                class="border rounded d-flex align-items-center justify-content-center"
+                style="width: 55px; height: 50px"
+              >
+                <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+              </div>
+            </div>
+            <div class="col">
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="savedCard1"
+                  placeholder="•••• •••• •••• 3193"
+                />
+                <label for="savedCard1" class="label-style">
+                  Card Number
+                </label>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button class="btn fw-semibold p-0 fs-6" style="color: #7b2cbf">
+                Remove card
+              </button>
+            </div>
           </div>
-          <button class="remove-btn">Remove card</button>
-        </div>
-      </main>
-      <footer>
-        <div class="section-title">Add new card:</div>
-        <form id="payment-form">
-          <div class="input-group">
-            <label for="cardholder-name">Cardholder's Name</label>
+          <div class="row align-items-center g-3 mb-5">
+            <div class="col-auto">
+              <div
+                class="border rounded d-flex align-items-center justify-content-center"
+                style="width: 55px; height: 50px"
+              >
+                <i class="fa-brands fa-cc-visa fa-2x"></i>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="savedCard2"
+                  placeholder="•••• •••• •••• 4296"
+                />
+                <label for="savedCard2" class="label-style">
+                  Card Number
+                </label>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button class="btn fw-semibold p-0 fs-6" style="color: #7b2cbf">
+                Remove card
+              </button>
+            </div>
+          </div>
+          <h2 class="h6 fw-bold mb-3">Add new card:</h2>
+          <div class="position-relative mb-4">
             <input
               type="text"
-              id="cardholder-name"
+              class="form-control"
+              id="cardholderName"
               placeholder="Murad Dabbous"
-              required
             />
+            <label for="cardholderName" class="label-style">
+              Cardholder's Name
+            </label>
           </div>
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardNumber"
+                  placeholder="1234 5678 1234 5678"
+                />
+                <label for="cardNumber" class="label-style">
+                  Card Number
+                </label>
+              </div>
+            </div>
 
-          <div class="form-row-three">
-            <div class="input-group">
-              <label for="card-number">Card Number</label>
-              <input
-                type="text"
-                id="card-number"
-                placeholder="1234 5678 1234 5678"
-                maxlength="19"
-                required
-              />
+            <div class="col-md-3">
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="expire"
+                  placeholder="MM/YY"
+                />
+                <label for="expire" class="label-style">Expire</label>
+              </div>
             </div>
-            <div class="input-group">
-              <label for="expire-date">Expire</label>
-              <input
-                type="text"
-                id="expire-date"
-                placeholder="MM/YY"
-                maxlength="5"
-                required
-              />
-            </div>
-            <div class="input-group">
-              <label for="cvv">Cvv</label>
-              <input
-                type="password"
-                id="cvv"
-                placeholder="•••"
-                maxlength="3"
-                required
-              />
+
+            <div class="col-md-3">
+              <div class="position-relative">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="cvv"
+                  placeholder="CVV"
+                />
+                <label for="cvv" class="label-style">Cvv</label>
+              </div>
             </div>
           </div>
-          <button type="submit" class="submit-btn">ADD CARD</button>
-        </form>
-      </footer>
-    </div>
+          <button type="button" class="btn btn-success w-100 py-3 fw-bold">
+            ADD CARD
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
